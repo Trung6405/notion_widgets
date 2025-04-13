@@ -106,10 +106,14 @@ body {
 </head>
 
 <body>
+
+  <link rel="preload" href="1.png" as="image">
+  <link rel="preload" href="2.png" as="image">
+  <link rel="preload" href="3.png" as="image">
+  
   <!-- partial:index.partial.html -->
   <div class="slider">
     <div class="slide current"></div>
-    <div class="slide"></div>
     <div class="slide"></div>
     <div class="slide"></div>
 <!-- where to add more photos -->
@@ -144,7 +148,7 @@ body {
       if (current.previousElementSibling) {
         current.previousElementSibling.classList.add("current");
       } else {
-        slides[slides.length - 2].classList.add("current");
+        slides[slides.length - 1].classList.add("current");
       }
     };
 
